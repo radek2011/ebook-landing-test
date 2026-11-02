@@ -63,30 +63,44 @@ body{-webkit-font-smoothing:antialiased}
 @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:18px}.book-scene{min-height:460px}.art-orbit{height:340px;width:340px}.book-sticker{right:calc(50% - 185px)}}
 @media(max-width:480px){.book-scene{min-height:405px}.book{width:244px;height:350px;padding:18px}.cover-text strong{font-size:26px}.cover-mark{width:35px;height:35px}.cover-mark svg{width:29px;height:29px}.cover-brand{font-size:15px}.book-sticker{right:0;bottom:18px;font-size:12px}.art-dot-grid{left:1%}.art-stars{right:6%}}
 
+
+/* Final approved preview styling. Brand artwork served as an actual file, not reconstructed SVG. */
+:root{--ink:#10243c;--gold:#b27e23;--paper:#faf9f6;--line:#e9e3d7}
+.top{background:#fff;box-shadow:0 1px 8px #1827380b}
+.nav{min-height:91px;gap:16px}
+.brand-image{display:inline-flex;align-items:center;text-decoration:none;flex:0 1 auto}
+.brand-image img{display:block;width:clamp(185px,24vw,284px);height:auto;mix-blend-mode:multiply}
+.nav-cta{font-size:13px;border-radius:9px}
+.hero{background:radial-gradient(circle at 82% 36%,#e9ddc7,transparent 44%),linear-gradient(110deg,#fff,#f8f4ec);padding:72px 0 68px}
+.hero:before{display:none}
+.hero-grid{grid-template-columns:1.08fr .92fr;gap:50px}
+.hero .lead{font-size:18px}
+.book-scene{position:relative;min-height:483px;display:grid;place-items:center}
+.book-scene:before{content:"";position:absolute;z-index:-1;width:415px;height:415px;max-width:100%;border:1px solid #c7a8666b;border-radius:50%;box-shadow:0 0 0 28px #f7f2e855}
+.book-scene:after{content:"✧";position:absolute;right:6%;top:7%;color:#c59438;font-size:30px}
+.book-booklet{width:314px;min-height:440px;background:linear-gradient(140deg,#fff,#f4ebdc 75%,#ede0c6);box-shadow:20px 25px 50px #10243c29;border-left:11px solid #ba8b37;border-radius:5px 15px 15px 5px;padding:27px 19px;transform:rotate(-4deg);position:relative;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.book-booklet:after{content:"";position:absolute;width:180px;height:180px;right:-100px;top:160px;border-radius:50%;border:1px solid #d0ad695c}
+.book-head{position:relative;z-index:1}
+.book-head img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+.book-kicker{position:relative;z-index:1;font-size:9px;letter-spacing:1.2px;color:#a27732;font-weight:800;margin-top:9px}
+.book-title{position:relative;z-index:1;font-size:32px;line-height:1.16;font-weight:900;letter-spacing:-.8px}
+.book-title em,.book-title span{font-style:normal;color:var(--gold)}
+.book-subtitle{position:relative;z-index:1;font-size:12px;line-height:1.5;color:#5b6981}
+.book-bottom{position:relative;z-index:1;font-size:9px;color:#95752f;letter-spacing:.6px;border-top:1px solid #dfcea5;padding-top:11px}
+.book-sticker{position:absolute;right:-12px;bottom:28px;background:#10243c;color:#fff;padding:14px 18px;border-radius:12px;font-size:15px;font-weight:850;transform:rotate(4deg);box-shadow:0 15px 35px #122a452e;z-index:2}
+.book-sticker small{display:block;font-size:10px;font-weight:500;margin-top:4px}
+footer{background:#f9f6ef;color:#10243c;border-top:1px solid #e8dfcf}
+footer p{color:#657386}
+footer .container{max-width:1140px}
+footer .brand-image img{width:min(295px,75vw)}
+footer a{color:#876323}
+#consent-settings{color:#2a4964}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:15px}.book-scene{min-height:485px}.nav{min-height:83px}}
+@media(max-width:550px){.brand-image img{width:clamp(150px,45vw,190px)}.nav-cta{font-size:10px;padding:9px;max-width:128px;line-height:1.35}.hero{padding:49px 0}.book-scene{min-height:405px}.book-scene:before{width:300px;height:300px}.book-booklet{width:253px;min-height:365px;padding:18px 14px}.book-title{font-size:26px}.book-sticker{right:0;bottom:14px;padding:10px 12px;font-size:12px}}
 </style></head>
-<body><header class="top"><div class="container nav"><a class="brand" href="#start"><span class="mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true" fill="none"><path d="M10 47V17h8l13 18 13-18h8v30h-9V31L31 47 19 31v16z" fill="#fff"/><path d="m41 28 13-13m-9 0h9v9" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>MENTOR <small>PRZEWAGI</small></span></a><a class="nav-cta" href="#wybierz">Odbierz próbkę / lista premierowa</a></div></header>
+<body><header class="top"><div class="container nav"><a class="brand brand-image" href="#start" aria-label="Mentor Przewagi — początek strony"><img src="assets/mentor-przewagi-logo.webp" width="295" height="105" alt="Mentor Przewagi — logo" decoding="async"></a><a class="nav-cta" href="#wybierz">Odbierz próbkę / lista premierowa</a></div></header>
 <main id="start"><div class="hero"><div class="container hero-grid"><div><span class="eyebrow pill">✦ Praktyczny e-book · projekt w 7 dni</span><h1>Zbuduj własną <em>mikroaplikację AI</em> w 7 dni</h1><p class="lead">Poznaj proces od pomysłu do pierwszej działającej wersji. Ucz się na <strong>Smart Budget</strong> — prostym przykładzie edukacyjnym — a potem wykorzystaj umiejętności do własnego projektu.</p><div class="points"><span>✓ Bez doświadczenia w programowaniu na start</span><span>✓ Ćwiczenia i prompty AI</span><span>✓ Publikacja i promocja</span></div><div class="actions"><a class="btn" href="#wybierz">Zobacz 5 stron bezpłatnie</a><a class="btn btn-outline" href="#wybierz">Cena premierowa 49 zł</a></div><p class="note">Smart Budget to przykład do nauki, nie zweryfikowany pomysł biznesowy. E-book nie gwarantuje zarobków.</p></div>
-<div class="book-scene" aria-label="Graficzna wizualizacja przewodnika Mentor Przewagi">
-  <span class="art-orbit" aria-hidden="true"></span>
-  <span class="art-dot-grid" aria-hidden="true"></span>
-  <div class="book">
-    <div class="cover-brand"><span class="cover-mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true" fill="none"><path d="M10 47V17h8l13 18 13-18h8v30h-9V31L31 47 19 31v16z" fill="#fff"/><path d="m41 28 13-13m-9 0h9v9" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>MENTOR<small>PRZEWAGI</small></span></div>
-    <div class="cover-text">
-      <span class="cover-kicker">PRAKTYCZNY PRZEWODNIK • AI</span>
-      <strong>Zbuduj własną <em>mikroaplikację AI</em> w 7 dni</strong>
-      <span class="cover-rule"></span>
-      <p>Od pomysłu do działającego prototypu.</p>
-    </div>
-    <div class="cover-icons" aria-hidden="true">
-      <span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18m-12 4 3 3-3 3m7-6-3 3 3 3"/></svg></span>
-      <i></i><span><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 2v3m6-3v3M9 19v3m6-3v3M2 9h3m-3 6h3m14-6h3m-3 6h3"/></svg></span>
-      <i></i><span><svg viewBox="0 0 24 24"><path d="m4 20 15-15M11 5h8v8M4 8v12h12"/></svg></span>
-    </div>
-    <div class="cover-bottom"><span>SMART BUDGET • PRZYKŁAD EDUKACYJNY</span><span>01/07</span></div>
-  </div>
-  <div class="book-sticker"><span class="sticker-icon">✦</span><span>5 stron PDF<small>Bez opłat</small></span></div>
-  <span class="art-stars" aria-hidden="true">✦</span>
-</div></div></div>
+<div class="book-scene" aria-label="Wizualizacja przewodnika Mentor Przewagi"><div class="book-booklet"><div class="book-head"><img src="assets/mentor-przewagi-logo.webp" alt="Mentor Przewagi" width="272" height="97"></div><div class="book-kicker">PRAKTYCZNY PRZEWODNIK KROK PO KROKU</div><div class="book-title">Zbuduj własną <em>mikroaplikację AI</em> w <span>7 dni</span></div><div class="book-subtitle">Od pomysłu do działającego prototypu, testowania, publikacji i pierwszej promocji.</div><div class="book-bottom">SMART BUDGET — PRZYKŁAD EDUKACYJNY</div></div><div class="book-sticker">5 stron PDF<small>Bezpłatnie</small></div></div></div></div>
 <section id="wybierz"><div class="container"><div class="center"><span class="eyebrow">Wybierz swoją ścieżkę</span><h2>Sprawdź poradnik lub dołącz do premiery</h2><p class="section-sub">Obie ścieżki wymagają tylko adresu e-mail. Pobranie próbki i zapis na listę nie są zamówieniem ani zobowiązaniem do zakupu.</p></div>
 <div class="two-forms">
 <article class="form-card"><span class="card-label">OPCJA A • BEZPŁATNA PRÓBKA</span><h3>Otrzymaj pierwsze 5 stron PDF</h3><p>Przeczytaj spis treści, wprowadzenie, opis Smart Budget i przykładowy scenariusz finansowy.</p><div class="price">0 zł</div><form id="sample-form" novalidate><label class="field" for="sample-email">Twój adres e-mail</label><input id="sample-email" class="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="twoj@email.pl" required><input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off"><label class="check"><input type="checkbox" name="newsletter">Chcę także otrzymywać osobne informacje o kolejnych materiałach i nowościach marki Mentor Przewagi (opcjonalne).</label><button type="submit" class="btn btn-full">Wyślij mi 5 stron PDF</button><p class="state" id="sample-status" aria-live="polite"></p></form><p class="note">Wyślemy e-mail z linkiem do próbki po potwierdzeniu adresu. Nie rozsyłamy spamu.</p></article>
@@ -95,7 +109,7 @@ body{-webkit-font-smoothing:antialiased}
 <section style="background:#fff"><div class="container"><div class="center"><span class="eyebrow">Praktyczna nauka</span><h2>Co zyskasz po przeczytaniu?</h2></div><div class="benefits"><div class="benefit"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="6" width="24" height="20" rx="4"/><path d="M4 12h24M9 9h.1M13 9h.1M9 17h6v5H9zm10 0h4m-4 4h4"/></svg></div><h3>Zaplanujesz aplikację</h3><p>Nauczysz się przełożyć problem na konkretne ekrany i funkcje MVP.</p></div><div class="benefit"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="8" y="8" width="16" height="16" rx="4"/><rect x="13" y="13" width="6" height="6" rx="1"/><path d="M13 3v5m6-5v5m-6 16v5m6-5v5M3 13h5m-5 6h5m16-6h5m-5 6h5"/></svg></div><h3>Wykorzystasz AI</h3><p>Dowiesz się, jak pracować z AI nad kodem, testami i poprawkami.</p></div><div class="benefit"><div class="ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m7 25 18-18M14 7h11v11M7 11v14h14"/></svg></div><h3>Przygotujesz premierę</h3><p>Poznasz podstawy strony sprzedażowej, publikacji i pomiaru reklam.</p></div></div></div></section>
 <section id="spis"><div class="container"><div class="center"><span class="eyebrow">Zawartość pełnego wydania</span><h2>Plan pracy na siedem dni</h2><p>Docelowo ok. 30 stron. Pełna wersja jest w przygotowaniu.</p></div><div class="toc"><div><b>01.</b> Wprowadzenie i scenariusz 19 040 zł</div><div><b>02.</b> Dzień 1: problem i grupa odbiorców</div><div><b>03.</b> Dzień 2: sprawdzenie popytu</div><div><b>04.</b> Dzień 3: projekt Smart Budget</div><div><b>05.</b> Dzień 4: budowa mikroaplikacji z AI</div><div><b>06.</b> Dzień 5: oferta i landing page</div><div><b>07.</b> Dzień 6: testy, płatności, publikacja</div><div><b>08.</b> Dzień 7: promocja i pierwsi klienci</div></div><div class="quote">Kwota 19 040 zł jest wyłącznie hipotetycznym przykładem matematycznym dla innego produktu cyfrowego, niezależnym od Smart Budget. Nie stanowi prognozy ani gwarancji przychodu.</div></div></section>
 <section><div class="container" style="max-width:900px"><span class="eyebrow">Pytania i odpowiedzi</span><h2>Przed zapisem</h2><div class="faq"><details><summary>Czy Smart Budget jest produktem, który kupuję?</summary><p>Nie. Kupujesz przewodnik edukacyjny pokazujący, jak projektować i budować mikroaplikację na przykładzie Smart Budget.</p></details><details><summary>Czy zapis na listę oznacza zakup?</summary><p>Nie. To tylko prośba o wiadomość, gdy rozpocznie się płatna przedsprzedaż. Płatność będzie dostępna dopiero po uruchomieniu bramki.</p></details><details><summary>Kiedy będzie dostępny pełny e-book?</summary><p>Datę dostarczenia gotowego produktu podamy jasno przed uruchomieniem płatnej przedsprzedaży.</p></details><details><summary>Jak otrzymam pięć stron próbki?</summary><p>Po uruchomieniu systemu mailowego i potwierdzeniu adresu otrzymasz e-mail z linkiem do próbki PDF.</p></details></div></div></section></main>
-<footer id="prywatnosc"><div class="container"><div class="brand" style="color:#fff"><span class="mark"><svg viewBox="0 0 64 64" width="38" height="38" aria-hidden="true" fill="none"><path d="M10 47V17h8l13 18 13-18h8v30h-9V31L31 47 19 31v16z" fill="#fff"/><path d="m41 28 13-13m-9 0h9v9" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>MENTOR <small>PRZEWAGI</small></span></div><p>Właściciel projektu: Horeca Project Radosław Dutka. Formularze służą do udostępnienia próbki lub przesłania jednej informacji o premierze. Osobny newsletter jest dobrowolny. Szczegółowa polityka prywatności i regulamin sprzedaży wymagają uzupełnienia przed uruchomieniem kampanii.</p><p>© 2026 Mentor Przewagi · <button id="consent-settings" type="button">Ustawienia cookies</button> · <a href="mailto:radek@horeca-project.com">Kontakt</a></p></div></footer>
+<footer id="prywatnosc"><div class="container"><a class="brand brand-image footer-brand" href="#start" aria-label="Mentor Przewagi"><img src="assets/mentor-przewagi-logo.webp" alt="Mentor Przewagi" width="300" height="107" loading="lazy" decoding="async"></a><p>Właściciel projektu: Horeca Project Radosław Dutka. Formularze służą do udostępnienia próbki lub przesłania jednej informacji o premierze. Osobny newsletter jest dobrowolny. Szczegółowa polityka prywatności i regulamin sprzedaży wymagają uzupełnienia przed uruchomieniem kampanii.</p><p>© 2026 Mentor Przewagi · <button id="consent-settings" type="button">Ustawienia cookies</button> · <a href="mailto:radek@horeca-project.com">Kontakt</a></p></div></footer>
 <aside class="consent" id="consent-box" aria-label="Wybór zgody na analitykę i reklamę"><b>Twoje ustawienia prywatności</b><p>Funkcjonalne działanie strony nie wymaga reklamowych plików cookie. Analitykę GA4 oraz piksele reklamowe Meta i TikTok uruchamiamy tylko po Twojej zgodzie. Możesz odmówić bez utraty dostępu do oferty.</p><div class="consent-options"><label><input type="checkbox" id="consent-analytics"> Statystyki</label><label><input type="checkbox" id="consent-marketing"> Pomiar reklam i remarketing</label></div><div class="consent-actions"><button class="btn btn-outline" id="reject-consent">Odrzuć opcjonalne</button><button class="btn btn-outline" id="save-consent">Zapisz wybór</button><button class="btn" id="accept-consent">Akceptuj wszystkie</button></div></aside>
 <script>
 /* Public settings. Replace IDs/URLs only after the corresponding accounts and backend are ready. */
